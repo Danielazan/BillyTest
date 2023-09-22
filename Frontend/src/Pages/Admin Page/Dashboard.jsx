@@ -17,7 +17,7 @@ const Dashboard = () => {
     const optionsSmall = { month: 'short', day: 'numeric' };
     const formattedDateSmall = today.toLocaleDateString('en-US', optionsSmall);
 
-    const URL = base.url
+    const URL = base.local
 
     const [remechains, setremechains] = useState([])
     const {mechines, dispatchMachine} = MachinaryContext()
@@ -207,7 +207,7 @@ const Dashboard = () => {
                     mechines && match.map(mec =>{
                       return(
                         <div className="w-[20rem] h-[10rem] relative" onClick={()=>setDashboardVariable(<EditEqui/>)}>
-                          <img crossorigin="anonymous"  src={`${base.url}/images/`+mec.ImagePath }alt="mechain" className="w-full md:w-[15rem] h-[10rem]" />
+                          <img crossorigin="anonymous"  src={`${base.local}/images/`+mec.ImagePath }alt="mechain" className="w-full md:w-[15rem] h-[10rem]" />
                           {/* <div className="absolute w-[15rem] h-[7rem]  bottom-3 left-[2rem] md:left-28 flex flex-col items-center justify-center bg-[#21252962]">
 
                           </div> */}

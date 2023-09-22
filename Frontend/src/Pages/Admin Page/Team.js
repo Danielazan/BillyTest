@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import MachinaryContext from "Hooks/useMachinaryContext"
 
 const Team = () => {
-    const URL = base.url
+    const URL = base.local
 
     const [File, setFile] = useState()
 

@@ -16,7 +16,7 @@ const EditEqui = () => {
     const [EquiModels, setEquiModels] = useState([])
 
     // for Editing the equipments data
-    const URL = base.url
+    const URL = base.local
 
     const [Capacity, setCapacity] = useState("")
 
