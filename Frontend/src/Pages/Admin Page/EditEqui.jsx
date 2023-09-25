@@ -5,6 +5,7 @@ import axios from "axios"
 import base from "base.js"
 import "./styles/Editimgbtn.css"
 import "./styles/containt.css"
+import { VscDebugStepBack } from "react-icons/vsc";
 
 const EditEqui = () => {
     const {mechines, dispatchMachine} = MachinaryContext()
@@ -76,7 +77,7 @@ const EditEqui = () => {
       await axios.delete(`${URL}/api/model/${id}`).then((res) => {
         const json = res.data
         
-        // dispatchMachine({type:"Display Machines",payload:json})
+        // dispatchMachine({type:"DeLETE Mechains",payload:json})
         console.log(res.data);
       });
      }
@@ -85,7 +86,7 @@ const EditEqui = () => {
         await axios.delete(`${URL}/api/machine/${id}`).then((res) => {
         const json = res.data
         
-        // dispatchMachine({type:"Display Machines",payload:json})
+        dispatchMachine({type:"DeLETE Mechains",payload:json})
         console.log(res.data);
       });
      }
@@ -95,7 +96,7 @@ const EditEqui = () => {
         await axios.put(`${URL}/api/machine/${id}`, ModelsEqui).then((res) => {
           const json = res.data
           
-          // dispatchMachine({type:"Display Machines",payload:json})
+          dispatchMachine({type:"Create Mechains",payload:json})
           console.log(res.data);
         });
      }
@@ -119,6 +120,8 @@ const EditEqui = () => {
             className=" rounded-xl w-full"
         >
             <div className="w-full h-fit flex flex-col gap-6 md:gap-0 rounded-xl p-6" style={{ border: '2px solid white' }} >
+
+
 
             {/* div to show all images  */}
             
@@ -147,7 +150,14 @@ const EditEqui = () => {
                     
                 <div className={`${toggle ? "hidden" : "block"}`}>
                     {/* previous data for the equipment */}
+                    <div>
+                      <h1 className="flex items-center justify-center text-white w-fit" onClick={()=>{settoggle(!toggle)}}>
+                        <span className="pr-4">Back</span>
+                        <VscDebugStepBack/>
+                      </h1>
+                    </div>
                   <div className='flex w-full flex-col md:flex-row items-center gap-2 justify-between'>
+                   
                       {OneImage && <div className="w-full md:w-1/2 h-full bg-blue-500 rounded-xl">
                         
                         <img crossorigin="anonymous"  src={`${URL}/images/`+single }alt="mechaine" className="w-full h-[20rem] rounded-xl" />

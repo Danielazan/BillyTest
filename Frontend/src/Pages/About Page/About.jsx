@@ -10,23 +10,25 @@ import axios from "axios"
 import base from "base.js"
 import Footer from 'Pages/Hero Page/Footer';
 import MissionPic from "asstes/Company Pictures/working.jpg"
-
+import TeamContext from "Hooks/Team"
 
 const About = () => {
-  const URL = base.url
+  const URL = base.local
+
+  const {Team, dispatchTeam} = TeamContext()
 
   useEffect(() => { 
       
     axios.get(`${URL}/api/teams`).then((res)=>{
      const json = res.data
 
-   
-     console.log(json)
+     dispatchTeam({type:"Display Team",payload:json})
+     console.log(Team)
       // dispatchMachine({type:"Display Machines",payload:json})
    })
    
    
- }, [])
+ }, [dispatchTeam])
   
   return (
     <div className='w-full flex flex-col items-center bg-[#161616] '>
@@ -197,34 +199,39 @@ const About = () => {
           </div> 
 
           {/* Leading Strong teams */}
-
+              
          <div className="w-full h-fit">
             <div className="w-full flex items-center justify-center">
               <h1>Our Strong Team</h1>
             </div>
-          <div className='w-full  gap-2 items-center justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pl-4 pr-4'>
-          <div className="teamcard border-white w-[300px] h-[380px] flex flex-col items-center justify-between text-left mb-3 lg:mb-0">
-            <div className='rounded-full w-[110px] h-[120px] bg-black mb-4'>
-              <img className=" rounded-full h-auto w-full lg:mr-0 " src={Manager
-              } alt="Image description"/>
-            </div>
-            <h1 className='text-[18px]  text-white '>
-              VIJAY PRAKASH
-            </h1>
-            <p className='text-md font-poppins text-[#dea2eb] text-center font-bold'>
-              Managing Director
-            </p>
-            <h1 className='text-[14px] flex justify-between gap-2 items-center  text-white '>
-              <IoLogoWhatsapp className="text-lg" color="#3dbf4f"/> +2347084618070
-            </h1>
-            <h1 className='text-[14px] flex justify-between gap-2 items-center  text-white '>
-              <BsFillTelephoneInboundFill className="text-lg" color="#00f6ff"/> +2349127794404
-            </h1>
-           
 
-        </div>
-              <div class="card">Card 2</div>
-              <div class="card">Card 3</div>
+          <div className='w-full  gap-2 items-center justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pl-4 pr-4'>
+              {
+                Team && Team.map(team =>{
+                  return(
+                    <div className="teamcard border-white w-[300px] h-[380px] flex flex-col items-center justify-between text-left mb-3 lg:mb-0">
+                      <div className='rounded-full w-[110px] h-[120px] bg-black mb-4'>
+                        <img className=" rounded-full h-auto w-full lg:mr-0 " src={`${base.local}/images/`+team.ImagePath } alt="Image description"/>
+                      </div>
+                      <h1 className='text-[18px]  text-white '>
+                        {team.Name}
+                      </h1>
+                      <p className='text-md font-poppins text-[#dea2eb] text-center font-bold'>
+                       {team.Position}
+                      </p>
+                      <h1 className='text-[14px] flex justify-between gap-2 items-center  text-white '>
+                        <IoLogoWhatsapp className="text-lg" color="#3dbf4f"/> {team.whatsAppNumber}
+                      </h1>
+                      <h1 className='text-[14px] flex justify-between gap-2 items-center  text-white '>
+                        <BsFillTelephoneInboundFill className="text-lg" color="#00f6ff"/> {team.PhoneNumber}
+                      </h1>
+                    
+
+                  </div>
+                  )
+                })
+              }
+              
             </div>
          </div>
 

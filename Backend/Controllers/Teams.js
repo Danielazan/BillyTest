@@ -72,7 +72,7 @@ const GetSingleMemeber = async(req,res)=>{
   try {
 
     const Getone = await Teams.findOne({where: {id:Teamid}}).then(result =>{
-      res.status(200).json({result,Modles})
+      res.status(200).json({result})
     })
   } catch (error) {
     res.status(400).json({error:error.message})
@@ -80,23 +80,44 @@ const GetSingleMemeber = async(req,res)=>{
 }
 
 const UpdateMember = async (req, res) => {
+
   try {
+    
+    const {id} =req.params
     const image = req.file;
-    const {Id} =req.params
-  const {Name,Position,PhoneNumber,Email,whatsAppNumber}= req.body
 
-  // if (!image) {
-  //   const error = new Error('Please upload a file');
-  //   error.status = 400;
-  //   throw error;
-  // }
+    const {Name,Position,PhoneNumber,Email,whatsAppNumber}= req.body
 
-    const teams = await Teams.update(
-      { Name,Position,PhoneNumber,Email,whatsAppNumber },
-      { where: { id: Id } }
-    ).then(result =>{
-      res.status(200).json({message:"Record updated Successfully"})
-    })
+    
+    console.log(image)
+
+    if (image){
+      const team = await Teams.update(
+        {Name,
+          Position,
+          PhoneNumber,
+          Email,
+          whatsAppNumber,
+          ImagePath:image.filename,
+        },
+        { where: { id:id } }
+      ).then(result =>{
+        res.status(200).json({ message: 'Record Updated successfully' })
+      })
+    }else{
+      const team = await Teams.update(
+        {Name,
+          Position,
+          PhoneNumber,
+          Email,
+          whatsAppNumber,
+          
+        },
+        { where: { id:id } }
+      ).then(result =>{
+        res.status(200).json({ message: 'Record Updated successfully' })
+      })
+    }
   } catch (error) {
     res.status(400).json({ error: error.message });
   }

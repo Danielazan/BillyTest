@@ -6,7 +6,7 @@ const sequelize = require('./database')
 const Machine = require("./Routes/Machines")
 const Teams = require("./Routes/Teams")
 const path = require("path")
-
+const Manager = require("./Models/Manager")
 require("dotenv").config()
 app = express()
 
@@ -24,6 +24,7 @@ app.use('/api',Machine)
 app.use('/api',Teams)
 
 sequelize.sync().then(()=>{
+    
     app.listen(process.env.PORT,(req,res)=>{
         console.log(`Listening at port ${process.env.PORT}`)
     })

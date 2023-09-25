@@ -12,31 +12,6 @@ import axios from "axios"
 import MachinaryContext from "Hooks/useMachinaryContext"
 import base from "base.js"
 
-
-const imagesList = [
-    {
-      id: 1,
-      images: [Excavator,Equi2],
-      alt: "[] 1",
-    },
-    {
-      id: 2,
-      images: [Equi3,Equi4],
-      alt: "[] 2",
-    },
-    {
-      id: 3,
-      images: [Equi2,Excavator],
-      alt: "[] 3",
-    },
-    {
-      id: 4,
-      images: [Excavator,Equi2],
-      alt: "[] 1",
-    },
-  ];
-
-
 const EquiImages = () => {
 
     
@@ -50,7 +25,7 @@ const EquiImages = () => {
     useEffect(() => { 
       
        axios.get(`${base.local}/api/machine`).then((res)=>{
-        const json = res.data
+        const json = res.data.reverse()
 
         // console.log(JSON.parse(json[4].Model))
         

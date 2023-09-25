@@ -1,6 +1,9 @@
 import React from 'react'
 import "./styles/FooterSpinner.css"
 import logo from "asstes/Solution Road New Logo.png"
+import { FaLocationDot } from "react-icons/fa6";
+import { BsFillTelephoneInboundFill } from "react-icons/bs";
+import { MdOutlineMarkEmailUnread } from "react-icons/md";
 
 import { BsInstagram,BsFacebook,BsLinkedin } from "react-icons/bs";
 import { RiWhatsappFill } from "react-icons/ri";
@@ -35,38 +38,31 @@ const Footer = () => {
                     </div>
                   </div>
 
-                    <div className='w-fil lg:w-1/2 p-2'>
+                    <div className='w-full lg:w-1/2 p-2'>
                       <div className="w-full flex flex-col">
-                          <h1 className='text-center'>Contact Us</h1>
-                          {/* <p>
-                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, perferendis?
-                          </p> */}
+                          <h1 className='text-white font-poppins text-center'>Contact Us</h1>
       
                     </div>
 
-                    <div className='flex items-center justify-between gap-4'>
-                          <div className='flex flex-col list-none justify-between gap-4 text-white font-poppins text-sm '>
-                              <li className='text-white text-left'>Home</li>
-                              <li>Contact</li>
-                              <li>Email</li>
+                    <div className='flex w-full md:w-[32rem]  items-center md:justify-between  md:pr-8'>
+                          <div className='flex w-full flex-col list-none items-center justify-between gap-[3rem] text-white font-poppins text-md font-bold '>
+                              
+                          <FaLocationDot color="#1197f5" className="text-2xl"/>
+                          <BsFillTelephoneInboundFill color="green" className="text-2xl" />
+                          <MdOutlineMarkEmailUnread color="red" className="text-2xl"/>
                               
                           </div>
       
-                          <div className='list-none justify-between gap-4 text-white font-poppins text-sm flex flex-col text-left items-start justify-start ml-4'>
-      
-                              <li className='text-white text-left'>Home</li>
-                              <li>Contact</li>
-                              <li>Email</li>
+                          <div className='list-none justify-between gap-4 text-white font-poppins text-sm flex flex-col text-left items- justify-start ml-4'>
+                              <li className="text-md md:text-xl font-poppins font-bold">
+                                Km 1/2 Enugu-Abakiliki Express-way, Akpuoga Nike, Enugu State
+                                </li>
+                                <li className='text-white text-left text-md md:text-xl font-bold font-poppins'>+234 708 461 8070</li>
+                              <li className="font-bold text-md md:text-xl font-poppins">solutionroadequipmentm@gmail.com</li>
                               
                           </div>
       
-                          <div className='list-none justify-between gap-4 text-white font-poppins text-sm flex flex-col text-left items-start justify-start ml-4'>
-      
-                              <li className='text-white text-left'>Home</li>
-                              <li>Contact</li>
-                              <li>Email</li>
-                              
-                          </div>
+                          
                           
                       </div>
                     </div>
@@ -79,26 +75,40 @@ const Footer = () => {
               <div class="grid lg:grid-cols-4 gap-4 grid-cols-2">
                 <div class="col-span-1 ">
                     <span className='flex flex-col items-center'>
-                        <BsInstagram  className='text-4xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
-                            <h2>Instagram</h2>
+                        <BsInstagram color="#d70bd5"  className='text-4xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
+                            <h2 className="text-white">
+                              <a className="text-[#d70bd5] no-underline text-md" href="https://instagram.com/solution_road_equipment_ltd?igshid=MzRlODBiNWFlZA" target="_blank" >Instagram</a>
+                            </h2>
+                              
                     </span>
                 </div>
                 <div class="col-span-1 ">
                     <span className='flex flex-col items-center'>
-                      <BsFacebook  className='text-4xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
-                          <h2>Facebook</h2>
+                      <BsFacebook  color="#1197f5" className='text-4xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
+                          <h2>
+                            <a href="https://www.facebook.com/profile.php?id=100089494998688"
+                            target="_blank"
+                             className="no-underline text-md">
+                              Facebook
+                            </a>
+                          </h2>
                     </span>
                 </div>
                 <div class="col-span-1 ">
                   <span className='flex flex-col items-center'>
-                    <BsLinkedin  className='text-4xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
-                        <h2>Facebook</h2>
+                    <BsLinkedin color="#076ca4" className='text-4xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
+                        <h2>
+                          <a href="" 
+                          className="no-underline text-md" 
+                          target="_blank"
+                          >Linkedin</a>
+                        </h2>
                     </span>
                 </div>
                 <div class="col-span-1 ">
                     <span className='flex flex-col items-center'>
-                      <RiWhatsappFill  className='text-4xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
-                          <h2>Whatsapp</h2>
+                      <RiWhatsappFill color="#54cc60"  className='text-4xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
+                          <h2 className="text-green-500">Whatsapp</h2>
                     </span>
                 </div>
               </div>

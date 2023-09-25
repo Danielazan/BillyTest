@@ -1,0 +1,17 @@
+.showscroll::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .showscroll::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  .showscroll::-webkit-scrollbar-thumb {
+    background-color: #22c55e;
+    border-radius: 10px;
+  }
+  
+  /* For Firefox */
+  /* scrollbar-width: thin;
+  scrollbar-color: red orange; */
+  

@@ -15,6 +15,8 @@ import Dashboard from "./Dashboard"
 import Equi from "./setEqui"
 import EditEqui from "./EditEqui"
 import Team from "./Team"
+import Users from "./Users"
+import Footer from "Pages/Hero Page/Footer"
 
 
 import logo from "asstes/Solution Road New Logo.png"
@@ -57,7 +59,7 @@ const Admin = () => {
             {isOpen && <BsFillFileExcelFill color="white" className="text-4xl mt-2" onClick={()=>toggleSidebar()} />}
         </div>
 
-        <div className="w-full h-fit flex flex-col md:flex-row">
+        <div className="w-full h-fit flex flex-col md:flex-row mb-4">
             <div className='w-1/6 h-fit  ml-4 hidden md:block' >
                 <motion.div
                     initial={{ opacity: 0, x: -100 }}
@@ -101,7 +103,9 @@ const Admin = () => {
                             </div>
                             <div className='flex items-center justify-start gap-2'>
                                 <MdNotificationsActive/>
-                                <Link to="/" className='no-underline text-white font-poppins'>Notification</Link>
+                                <Link onClick={()=>{
+                                    setDashboardVariable(<Users/>)
+                                }} className='no-underline text-white font-poppins'>Managers</Link>
                             </div>
                             <div className='flex items-start justify-start gap-2'>
                                 <BiSolidLogOut/>
@@ -173,7 +177,9 @@ const Admin = () => {
                             </div>
                             <div className='flex items-center justify-start gap-2'>
                                 <MdNotificationsActive/>
-                                <Link to="/" className='no-underline text-white font-poppins'>Notification</Link>
+                                <Link onClick={()=>{
+                                    setDashboardVariable(<Users/>)
+                                }} className='no-underline text-white font-poppins'>Managers</Link>
                             </div>
                             <div className='flex items-start justify-start gap-2'>
                                 <BiSolidLogOut/>
@@ -201,6 +207,8 @@ const Admin = () => {
                 {DashboardVariable}
             </div>
         </div>
+
+        <Footer/>
     </div>
   )
 }

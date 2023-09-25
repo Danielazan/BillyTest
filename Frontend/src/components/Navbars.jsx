@@ -56,11 +56,13 @@ const Navbars = () => {
           {!toogle && <BsFillFileExcelFill color="white" className="text-4xl mt-2" onClick={()=>handleClick()} />}
         <div className={`${toogle ? "hidden":"flex"} mt-4 flex rounded-md flex-col gap-6 bg-black w-[120px] items-center right-0 absolute top-8 justify-center `}>
           <NavLink to='/' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>Home</NavLink>
-          <NavLink to='/Equi' className={`font-poppins font-bold cursor-pointer text-[18px] text-NavTextColor no-underline`}>Equipments</NavLink>
+          
           <NavLink to='/About' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>About</NavLink>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>Services</NavLink>
           <NavLink to='/Admin' className={`font-poppins font-bold cursor-pointer text-[18px] text-white no-underline`}>Admin</NavLink>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>Contact</NavLink>
+
+          <NavLink to='/Equi' className={`font-poppins font-bold cursor-pointer text-[18px] text-white no-underline`}>Equipments</NavLink>
         </div>
         </div>
       </nav>

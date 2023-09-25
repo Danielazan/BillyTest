@@ -1,9 +1,13 @@
-const {User} = require("../Controllers/User")
+const {CreateManger,ChangeManager,GetAllManager} = require("../Controllers/Managers")
 const express = require("express")
 
 const router = express.Router()
 
-router.post("/signup",User)
+router.post("/login",CreateManger)
+
+
+
+router.get("/manger",GetAllManager)
 
 
 

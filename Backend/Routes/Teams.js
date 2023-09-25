@@ -19,7 +19,7 @@ router.get("/teams/:id", GetSingleMemeber)
 
 
 
-router.put("/teams/:Id",UpdateMember)
+router.put("/teams/:id",upload.single('image'),UpdateMember)
 
 
 

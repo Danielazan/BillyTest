@@ -8,6 +8,8 @@ import base from "base.js"
 import "./styles/containt.css"
 import {DashboardContext } from './Admin';
 import EditEqui from "./EditEqui"
+import Teams from "./Team"
+import TeamContext from "Hooks/Team"
 
 const Dashboard = () => {
     const today = new Date();
@@ -20,10 +22,14 @@ const Dashboard = () => {
     const URL = base.local
 
     const [remechains, setremechains] = useState([])
+
     const {mechines, dispatchMachine} = MachinaryContext()
+
     const [DashboardVariable, setDashboardVariable] = useContext(DashboardContext)
 
     const [showAllCards, setShowAllCards] = useState(false);
+
+    const {Team, dispatchTeam} = TeamContext()
     
     useEffect(() => {
         axios.get(`${URL}/api/machine`).then((res)=>{
@@ -38,22 +44,40 @@ const Dashboard = () => {
              console.log(remechains)
           })
           
-   
+          axios.get(`${URL}/api/teams`).then((res)=>{
+            const json = res.data
+    
+            console.log(json)
+            
+            dispatchTeam({type:"Display Team",payload:json})
+             
+
+             console.log(remechains)
+          })
           
-    }, [dispatchMachine])
+          
+    }, [dispatchMachine,dispatchTeam])
 
 
-    useEffect(() => {
-     
-    }, [])
+    // useEffect(() => {
+    //     axios.get(`${URL}/api/teams`).then((res)=>{
+    //         const json = res.data
+    
+    //         console.log(json)
+            
+    //         dispatchTeam({type:"Create Team",payload:json})
+             
+
+    //          console.log(remechains)
+    //       })
+          
+    // }, [dispatchTeam])
     
 
     const match = mechines.reverse().slice(0,3)
     
     
-    const toEditpage= ()=>{
 
-    }
 
 
   return (
@@ -201,7 +225,7 @@ const Dashboard = () => {
                     </div>
 
                     {/* third div section */}
-                    <div className="w-full h-[10rem] overflow-scroll rounded-xl main-cont mt-4" style={{ border: '2px solid white' }}>
+                    <div className="w-full h-[10rem] overflow-scroll rounded-xl main-cont mt-4" >
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between pl-4 pr-4 md:pr-0">
                   {
                     mechines && match.map(mec =>{
@@ -221,6 +245,86 @@ const Dashboard = () => {
           </div>
                     </div>
 
+                    {/* Fourth Section */}
+
+                    <div className="w-full mt-4 hidden md:block overflow-scroll main-cont shadow-md md:rounded-xl md:px-4 md:py-3  rounded-lg " style={{ border: '2px solid white' }}>
+                            <div onClick={()=>setDashboardVariable(<Teams/>)} className="w-full flex iteams-center justify-center">
+                                <h2 className="font-poppins font-bold text-white">Team Members</h2>
+                            </div>
+                                <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 bg-black" >
+                                    <tr>
+                                        <th scope="col" className="px-6 py-3 text-white">
+                                            Member ID
+                                        </th>
+                                        <th scope="col" className="px-6 py-3 text-white">
+                                             FullName
+                                        </th>
+                                        <th scope="col" className="px-6 py-3">
+                                            Position
+                                        </th>
+                                       
+                                    </tr>
+                                </thead>
+                                <tbody>
+                            {
+                              Team.map(team =>{
+                                return(
+                                  <tr
+                            className="border-b border-neutral-100 bg-neutral-50 text-neutral-800 dark:bg-neutral-50">
+                            <td className="whitespace-nowrap px-6 py-4 font-medium">
+                              {team.id}
+                            </td>
+                            <td className="whitespace-nowrap px-6 py-4">{team.Name}</td>
+                            <td class="whitespace-nowrap px-6 py-4">{team.Position}</td>
+                          </tr>
+                                )
+                              })
+                            }
+                        </tbody>
+                            </table>
+                    </div>
+                    
+                    {/* For small Screens Only */}
+
+                    <div className="md:hidden overflow-scroll  w-full h-[20.6rem] mt-4
+                            shadow-md md:rounded-xl md:px-4 md:py-3  rounded-lg  " style={{ border: '2px solid white' }}>
+                            <div onClick={()=>setDashboardVariable(<Teams/>)} className="w-full flex iteams-center justify-center">
+                                <h2 className="font-poppins font-bold text-white">Team Members</h2>
+                            </div>
+                                <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 bg-black" >
+                                    <tr>
+                                        <th scope="col" className="px-6 py-3 text-white">
+                                            Member ID
+                                        </th>
+                                        <th scope="col" className="px-6 py-3 text-white">
+                                             FullName
+                                        </th>
+                                        <th scope="col" className="px-6 py-3">
+                                            Position
+                                        </th>
+                                       
+                                    </tr>
+                                </thead>
+                                <tbody>
+                            {
+                              Team.map(team =>{
+                                return(
+                                  <tr
+                            className="border-b border-neutral-100 bg-neutral-50 text-neutral-800 dark:bg-neutral-50">
+                            <td className="whitespace-nowrap px-6 py-4 font-medium">
+                              {team.id}
+                            </td>
+                            <td className="whitespace-nowrap px-6 py-4">{team.Name}</td>
+                            <td class="whitespace-nowrap px-6 py-4">{team.Position}</td>
+                          </tr>
+                                )
+                              })
+                            }
+                        </tbody>
+                            </table>
+                    </div>
                 </motion.div>
                 </div>
   )

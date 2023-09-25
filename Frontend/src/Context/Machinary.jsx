@@ -14,9 +14,9 @@ const MachinaryReducer =(state, action)=>{
             return{
                 mechines:[action.payload, ...state.mechines]
             }
-        case "DeLETE":
+        case "DeLETE Mechains":
             return{
-                mechines:action.payload
+                mechines: state.mechines.filter((N)=> N._id !==action.payload._id)
             }
         default:
             return state
