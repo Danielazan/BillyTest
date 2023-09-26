@@ -78,6 +78,7 @@ const EditEqui = () => {
         const json = res.data
         
         // dispatchMachine({type:"DeLETE Mechains",payload:json})
+        settoggle(!toggle)
         console.log(res.data);
       });
      }
@@ -88,6 +89,7 @@ const EditEqui = () => {
         
         dispatchMachine({type:"DeLETE Mechains",payload:json})
         console.log(res.data);
+        settoggle(!toggle)
       });
      }
 

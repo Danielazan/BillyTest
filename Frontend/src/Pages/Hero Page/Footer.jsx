@@ -4,6 +4,7 @@ import logo from "asstes/Solution Road New Logo.png"
 import { FaLocationDot } from "react-icons/fa6";
 import { BsFillTelephoneInboundFill } from "react-icons/bs";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
+import { PiWhatsappLogoFill } from "react-icons/pi";
 
 import { BsInstagram,BsFacebook,BsLinkedin } from "react-icons/bs";
 import { RiWhatsappFill } from "react-icons/ri";
@@ -38,7 +39,7 @@ const Footer = () => {
                     </div>
                   </div>
 
-                    <div className='w-full lg:w-1/2 p-2'>
+                    <div className='w-full lg:w-1/2 p-2 flex flex-col items-center justify-center' >
                       <div className="w-full flex flex-col">
                           <h1 className='text-white font-poppins text-center'>Contact Us</h1>
       
@@ -47,20 +48,41 @@ const Footer = () => {
                     <div className='flex w-full md:w-[32rem]  items-center md:justify-between  md:pr-8'>
                           <div className='flex w-full flex-col list-none items-center justify-between gap-[3rem] text-white font-poppins text-md font-bold '>
                               
-                          <FaLocationDot color="#1197f5" className="text-2xl"/>
+                         <div className="w-full flex items-center gap-4">
+                         <FaLocationDot color="#1197f5" className="text-2xl"/>
+                         <span className="text-md md:text-xl font-poppins font-bold">
+                                Km 1/2 Enugu-Abakiliki Express-way, Akpuoga Nike, Enugu State
+                                </span>
+                         </div>
+
+                         <div className="w-full flex items-center gap-4">
+
+                          <PiWhatsappLogoFill color="green" className="text-2xl" />
+                              <span className="text-md md:text-xl font-poppins font-bold">
+                              +234 708 461 8070
+                                </span>
+                         </div>
+
+                         <div className="w-full flex items-center gap-4">
+
                           <BsFillTelephoneInboundFill color="green" className="text-2xl" />
-                          <MdOutlineMarkEmailUnread color="red" className="text-2xl"/>
+                              <span className="text-md md:text-xl font-poppins font-bold">
+                              +234 903 664 561
+                                </span>
+                         </div>
+                          
+                         <div className="w-full flex items-center gap-4">
+                                <MdOutlineMarkEmailUnread color="red" className="text-2xl"/>
+                                <span className="text-md md:text-xl font-poppins font-bold">
+                                  solutionroadequipmentm
+                                  @gmail.com
+                                </span>
+                         </div>
+                          
                               
                           </div>
       
-                          <div className='list-none justify-between gap-4 text-white font-poppins text-sm flex flex-col text-left items- justify-start ml-4'>
-                              <li className="text-md md:text-xl font-poppins font-bold">
-                                Km 1/2 Enugu-Abakiliki Express-way, Akpuoga Nike, Enugu State
-                                </li>
-                                <li className='text-white text-left text-md md:text-xl font-bold font-poppins'>+234 708 461 8070</li>
-                              <li className="font-bold text-md md:text-xl font-poppins">solutionroadequipmentm@gmail.com</li>
-                              
-                          </div>
+                          
       
                           
                           

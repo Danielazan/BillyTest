@@ -24,21 +24,35 @@ const SetEqui = () => {
 
     const {mechines, dispatchMachine} = MachinaryContext()
 
-    const [Error, setError] = useState({})
+    const [Error, setError] = useState()
+
+    const [LastID, setLastID] = useState()
 
     const Models ={
         ModelName,
         Capacity:ModelCapcity
     }
-        const mechinesData = ()=>{
-            const lastid = mechines[mechines.length -1].id
-            console.log(lastid)
-            return lastid
-        }
-       const AddModel =()=>{
-        const id=mechinesData()
 
-        axios.post(`${URL}/api/model/${id}`, Models).then((res) => {
+       
+
+        const mechinesData = ()=>{
+            axios.get(`${URL}/api/machine`).then((res)=>{
+                const json = res.data
+           
+                const lastid = json[json.length -1].id
+                console.log(lastid)
+                setLastID(lastid)
+              })
+
+              return LastID
+        }
+       const AddModel =async()=>{
+        await mechinesData()
+        const id=LastID
+
+        console.log(id)
+
+        await axios.post(`${URL}/api/model/${id}`, Models).then((res) => {
             const json = res.data
             
             // dispatchMachine({type:"Display Machines",payload:json})
@@ -70,10 +84,18 @@ const SetEqui = () => {
             }
           }).then((res =>{
             console.log(res.data)
+            const json =res.data
+
+            mechinesData()
+
+            dispatchMachine({type:"Create Mechains",payload:json})
         })).catch(error =>{
             setError(error.response.data)
             console.log(error.response.data)
         })
+
+        
+
         setDescription("")
         setEquimentName("")
     }
@@ -136,7 +158,11 @@ const SetEqui = () => {
                     {Error  && <h2 className="font-poppins font-extrabold text-xl text-red-500">{Error.error}</h2>}
                 </div>
                 
-
+                <div className="w-full items-center flex justify-center">
+                    <h2 className="text-yellow-500 text-sm font-poppins"><span className="text-red-500 font-bold font-poppins text-md ">
+                            Note:
+                        </span>Save Equipment First Before Adding Models</h2>
+                </div>
                 <div className="w-full items-center md:items-left h-fit pl-4 mt-2 justify-center">
                     <button className=" border border-blue-500 w-[14rem] rounded-xl md:w-[28rem]" onClick={()=>{setNotModel(!NotModel)}}>
                         <AiOutlineDropbox className='w-[300px] ' color="#22a7f2"/>
@@ -148,7 +174,7 @@ const SetEqui = () => {
                         <h1 className="text-white hidden md:block font-poppins text-2xl">Model Name</h1>
 
                         <input 
-                        className="border-b border-blue-500 w-[40rem]" placeholder="Model Name" type="text"
+                        className="border-b border-blue-500 w-[40rem] text-white" placeholder="Model Name" type="text"
                         value={ModelName}
                         style={{backgroundColor: "transparent"}}
                         onChange={(e) => setModelName(e.target.value)}
@@ -159,24 +185,24 @@ const SetEqui = () => {
                         <h1 className="text-white hidden md:block font-poppins text-2xl">Model Capacity</h1>
 
                         <input 
-                        className="border-b border-blue-500 w-[40rem]" placeholder="Model Capacity" type="text"
+                        className="border-b border-blue-500 w-[40rem] text-white" placeholder="Model Capacity" type="text"
                         style={{backgroundColor: "transparent"}}
                         value={ModelCapcity}
                         onChange={(e) => setModelCapcity(e.target.value)}
                         />
                         </div>
-                           <div className="w=full h-fit flex items-center justify-center">
+                           {/* <div className="w=full h-fit flex items-center justify-center">
                            <button className="font-poppins text-white text-xl" onClick={AddModel}>
                                 Add More Models
                             </button>
-                           </div>
+                           </div> */}
                     </div>
                 </div>
 
                 
                 <div className="w-full mt-4 mb-6 items-center justify-center flex ">
-                    <button className=' lg:ml-20' onClick={handleupload}>
-                        Submit
+                    <button className=' lg:ml-20' onClick={AddModel}>
+                    Add More Models
                         <div id="clip">
                             <div id="leftTop" class="corner"></div>
                             <div id="rightBottom" class="corner"></div>

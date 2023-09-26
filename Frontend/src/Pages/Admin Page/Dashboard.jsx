@@ -33,7 +33,7 @@ const Dashboard = () => {
     
     useEffect(() => {
         axios.get(`${URL}/api/machine`).then((res)=>{
-            const json = res.data
+            const json = res.data.reverse()
     
             console.log(json)
             

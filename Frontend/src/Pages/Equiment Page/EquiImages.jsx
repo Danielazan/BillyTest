@@ -43,8 +43,8 @@ const EquiImages = () => {
     setShowAllCards(true);
   };
 
-  const Desfun = () => {
-    navigate("/Des")
+  const Desfun = (id) => {
+    navigate(`/Des/${id}`)
   };
   return (
   <div className="w-full ">
@@ -101,11 +101,11 @@ const EquiImages = () => {
                           <img crossorigin="anonymous"  src={`${base.local}/images/`+mec.ImagePath }alt="mechain" className="w-full h-[20rem]" />
                           <div className="absolute w-[15rem] h-[7rem]  bottom-3 left-[2rem] md:left-28 flex flex-col items-center justify-center bg-[#21252962]">
 
-                          <h1 className="text-2xl text-poppins font-bold text-[#fdc901]">Machine Name</h1>
-                              <h1 className="text-poppins text-xl text-[#f6f7f9]">Machine Price</h1>
+                          <h1 className="text-2xl text-poppins font-bold text-[#fdc901]">{mec.Name}</h1>
+                             
 
                               
-                                <button class="desbtn" onClick={Desfun}>
+                                <button class="desbtn" onClick={()=>{Desfun(mec.id)}}>
                                     <span class="desbtn-content">Description</span>
                                 </button>
                             

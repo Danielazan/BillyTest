@@ -43,7 +43,7 @@ const App = () => {
         <Route path='/About' element={<About/>}/>
         <Route path='/Admin' element={User ? <Admin /> : <Navigate to='/signup' />}/>
         <Route path='/Equi' element={<Equi/>}/>
-        <Route path='/Des' element={<EquiDes/>}/>
+        <Route path='/Des/:id' element={<EquiDes/>}/>
       </Routes>
     </Router>
     </div>
