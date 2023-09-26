@@ -11,7 +11,7 @@ import Testimony from './Testimony';
 
 
 
-const Sats = () => {
+const Sats = () => { 
   return (
     <div className='w-screen md:w-full h-fit bg-custombg p-2 md:p-0'>
       <div className='flex p-2 w-full h-fit gap-2 md:gap-0 justify-between items-center '>
