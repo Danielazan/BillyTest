@@ -41,17 +41,17 @@ const Footer = () => {
 
                     <div className='w-full lg:w-1/2 p-2 flex flex-col items-center justify-center' >
                       <div className="w-full flex flex-col">
-                          <h1 className='text-white font-poppins text-center'>Contact Us</h1>
+                          <h1 className='text-[#474747] font-poppins text-center'>Contact Us</h1>
       
                     </div>
 
                     <div className='flex w-full md:w-[32rem]  items-center md:justify-between  md:pr-8'>
-                          <div className='flex w-full flex-col list-none items-center justify-between gap-[3rem] text-white font-poppins text-md font-bold '>
+                          <div className='flex w-full pl-4 md:pl-0 flex-col list-none items-center justify-between gap-[3rem] text-white font-poppins text-md font-bold '>
                               
                          <div className="w-full flex items-center gap-4">
                          <FaLocationDot color="#1197f5" className="text-2xl"/>
                          <span className="text-md md:text-xl font-poppins font-bold">
-                                Km 1/2 Enugu-Abakiliki Express-way, Akpuoga Nike, Enugu State
+                                Km 1/2 Enugu-Abakiliki Express-way, Akpuoga Nike, Enugu State, Nigeria.
                                 </span>
                          </div>
 
@@ -92,25 +92,25 @@ const Footer = () => {
 
           {/* social media  */}
             <div className='w-full h-fit flex flex-col items-center pt-4'>
-                <h1 className='bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text font-poppins'> Follow US</h1>
+                <h1 className='text-[#474747] font-poppins'> Follow US</h1>
     
               <div class="grid lg:grid-cols-4 gap-4 grid-cols-2">
                 <div class="col-span-1 ">
                     <span className='flex flex-col items-center'>
-                        <BsInstagram color="#d70bd5"  className='text-4xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
-                            <h2 className="text-white">
-                              <a className="text-[#d70bd5] no-underline text-md" href="https://instagram.com/solution_road_equipment_ltd?igshid=MzRlODBiNWFlZA" target="_blank" >Instagram</a>
+                        <BsInstagram color="#f0f3f4"  className='text-2xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
+                            <h2 className="text-[#f0f3f4] text-2xl">
+                              <a className="text-[#f0f3f4] no-underline text-md" href="https://instagram.com/solution_road_equipment_ltd?igshid=MzRlODBiNWFlZA" target="_blank" >Instagram</a>
                             </h2>
                               
                     </span>
                 </div>
                 <div class="col-span-1 ">
                     <span className='flex flex-col items-center'>
-                      <BsFacebook  color="#1197f5" className='text-4xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
-                          <h2>
+                      <BsFacebook  color="#f0f3f4" className='text-2xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
+                          <h2 className="text-[#f0f3f4] text-2xl">
                             <a href="https://www.facebook.com/profile.php?id=100089494998688"
                             target="_blank"
-                             className="no-underline text-md">
+                             className="no-underline text-[#f0f3f4] text-2xl">
                               Facebook
                             </a>
                           </h2>
@@ -118,10 +118,10 @@ const Footer = () => {
                 </div>
                 <div class="col-span-1 ">
                   <span className='flex flex-col items-center'>
-                    <BsLinkedin color="#076ca4" className='text-4xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
-                        <h2>
+                    <BsLinkedin color="#f0f3f4" className='text-2xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
+                        <h2 className="text-[#f0f3f4] text-2xl">
                           <a href="" 
-                          className="no-underline text-md" 
+                          className="no-underline text-2xl text-[#f0f3f4]" 
                           target="_blank"
                           >Linkedin</a>
                         </h2>
@@ -129,8 +129,8 @@ const Footer = () => {
                 </div>
                 <div class="col-span-1 ">
                     <span className='flex flex-col items-center'>
-                      <RiWhatsappFill color="#54cc60"  className='text-4xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
-                          <h2 className="text-green-500">Whatsapp</h2>
+                      <RiWhatsappFill color="#f0f3f4"  className='text-2xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
+                          <h2 className="text-[#f0f3f4] text-2xl">Whatsapp</h2>
                     </span>
                 </div>
               </div>

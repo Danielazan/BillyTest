@@ -42,7 +42,7 @@ const Navbars = () => {
       </nav>
           {/* mobile navbar */}
       <nav className=' w-screen flex    justify-between  lg:hidden z-50' >
-        <div className="flex flex-col justify-center  items-center">
+        <div className="flex flex-col justify-center  items-center p-6">
           <div className="rounded-full border border-solid border-black bg-white bod" style={{width:"80px", height:"80px",}}>
           <img className="w-full max-w-full h-auto sm:w-6/2 md:w-full" src={logo} alt="Image description"/>  
           </div>
@@ -54,15 +54,15 @@ const Navbars = () => {
           {/* {toogle ? <BsFillFileExcelFill color="white" onClick={()=>handleClick()}   className="text-9xl" /> : <BsFillGrid3X3GapFill color="white" className="text-6xl" />} */}
           {toogle && <GiHamburgerMenu color="white" className="text-4xl mt-2" onClick={()=>handleClick()} />}
           {!toogle && <BsFillFileExcelFill color="white" className="text-4xl mt-2" onClick={()=>handleClick()} />}
-        <div className={`${toogle ? "hidden":"flex"} mt-4 flex rounded-md flex-col gap-6 bg-black w-[120px] items-center right-0 absolute top-8 justify-center `}>
-          <NavLink to='/' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>Home</NavLink>
+        <div className={`${toogle ? "hidden":"flex"} mt-4 flex rounded-md flex-col gap-6 bg-black w-[130px] items-center right-0 absolute top-8 justify-center px-12 `}>
+          <NavLink to='/' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline pt-2`}>Home</NavLink>
           
           <NavLink to='/About' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>About</NavLink>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>Services</NavLink>
           <NavLink to='/Admin' className={`font-poppins font-bold cursor-pointer text-[18px] text-white no-underline`}>Admin</NavLink>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>Contact</NavLink>
 
-          <NavLink to='/Equi' className={`font-poppins font-bold cursor-pointer text-[18px] text-white no-underline`}>Equipments</NavLink>
+          <NavLink to='/Equi' className={`font-poppins font-bold cursor-pointer text-[18px] text-white no-underline pb-2`}>Equipments</NavLink>
         </div>
         </div>
       </nav>

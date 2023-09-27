@@ -99,7 +99,7 @@ const EquiImages = () => {
                       return(
                         <div className="w-full relative">
                           <img crossorigin="anonymous"  src={`${base.local}/images/`+mec.ImagePath }alt="mechain" className="w-full h-[20rem]" />
-                          <div className="absolute w-[15rem] h-[7rem]  bottom-3 left-[2rem] md:left-28 flex flex-col items-center justify-center bg-[#21252962]">
+                          <div className="absolute w-[15rem] h-[7rem]  bottom-3 left-[3rem] md:left-28 flex flex-col items-center justify-center bg-[#21252962]">
 
                           <h1 className="text-2xl text-poppins font-bold text-[#fdc901]">{mec.Name}</h1>
                              

@@ -32,7 +32,7 @@ const Testimony = () => {
           </div>
             <div className="w-full h-fit md:h-[8rem]">
               <p className='flex flex-col font-bold font-poppins text-[#d7d7d79d] lg:ml-6 text-left ml-4 mt-4 lg:mt-0  lg:text-left'>
-                Computer-aided  designing enables to design the most critical
+                Our Computer-aided  designing enables to design the most critical
                 parts in  such a way that they are capable of withstanding  the
                 severest  of  shocks  and  vibrations  during  operation. Ready
                 availability  of  all  frequently  needed  spares along with quick
@@ -40,7 +40,7 @@ const Testimony = () => {
                 productivity.
               </p>
             </div>
-            <button className=' lg:ml-20' mt-2 >
+            {/* <button className=' lg:ml-20' mt-2 >
                 Learn More
                 <div id="clip">
                     <div id="leftTop" class="corner"></div>
@@ -50,7 +50,7 @@ const Testimony = () => {
                 </div>
                 <span id="rightArrow" class="arrow"></span>
                 <span id="leftArrow" class="arrow"></span>
-            </button>
+            </button> */}
           </div>
 
           <div className='w-full  lg:w-1/2 lg:items-center lg:justify-center flex flex-col'>
@@ -139,7 +139,7 @@ const Testimony = () => {
                   <div className="objchild">
                     <h1 className='text-white text-center text-2xl'>Try our services Now</h1>
                       <span className="inn6 text-white text-md">
-                        <p className='font'> Everything you need to accept card payments and grow your business anywhere on the planet.</p>
+                        <p className='font-poppins text-white font-bold p-4'> Solution Road Equipments & Spars Ltd.</p>
                       </span>
                   </div>
               </div>
