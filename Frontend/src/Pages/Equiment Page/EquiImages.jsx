@@ -79,11 +79,11 @@ const EquiImages = () => {
                   </p>
               </div>
 
-              <div className='w-full flex items-center justify-center'>
+              {/* <div className='w-full flex items-center justify-center'>
                 <button className="voltage-button">
                   View All Equipments
                 </button>
-              </div>
+              </div> */}
 
             
 

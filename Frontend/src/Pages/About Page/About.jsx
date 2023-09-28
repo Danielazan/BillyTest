@@ -64,7 +64,8 @@ const About = () => {
                   Solution Road Equipment & Spars Ltd was founded in 2018 upon an experienced and Construction crew. We created a path to standardization as we grow into construction equipments and spare parts. Solution began work in construction in 2019 in various trades of construction which he realized he truly valued manufacturing equipments and so he began framing and construction of spare parts.
                   </p>
                   <p className="font-poppins text-[#818287] text-md text-justify">
-                  We quickly gained recognition and respect among general contractors as a professional manufacturing company who’s attention to detail, high quality of work, ability to produce spare parts and our unique building style was noticeably unparalleled. As more and more projects were completed, and through their interaction with Solution on their job sites, we gained the trust of construction companies and commercial government bodies who still today continue to recommend our exceptional work. As the years went by we began to get inquiries from business owners and construction companies for projects such as manufacturing of equipments, parts reproduction and repairs to construction equipments and spare parts. By 2005, we were handling large equipments remodeling projects, as well as additions and production work. 
+                  We quickly gained recognition and respect among general contractors as a professional manufacturing company who’s attention to detail, high quality of work, ability to produce spare parts and our unique building style was noticeably unparalleled. As more and more projects were completed, and through their interaction with Solution on their job sites, we gained the trust of construction companies and commercial government bodies who still today continue to recommend our exceptional work. As the years went by we began to get inquiries from business owners and construction companies for projects such as manufacturing of equipments, parts reproduction and repairs to construction equipments and spare parts. By 2020, we were handling large equipments remodeling projects, as well as additions and production work. 
+
                   </p>
                     <p className="font-poppins text-[#818287] text-md text-justify">
                     Our philosophy has always been that a quality project begins with the right equipments and the right structure. With this in mind, we have assembled a team of proven elite and educated professionals in which we can place our trust and our clients’ best interests.
@@ -98,8 +99,9 @@ const About = () => {
               {/* Our story second section */}
               <div className='w-full lg:w-1/2 flex flex-col justify-between items-center mt-6'>
                   <div className='flex w-full ml-2 justify-between'>
-                      <h1>01.</h1>
+                      
                       <div className='w-full flex flex-col ml-3'>
+
                         <h3 className="text-[#e2a80a]">Longevity</h3>
                         <p className="text-poppins font-bold text-[#818287] text-md text-justify">
                           The company has been in the business for a significant amount of time, which demonstrates our ability to adapt to changing market conditions and provide consistent service to their customers
@@ -107,7 +109,7 @@ const About = () => {
                       </div>
                   </div>
                   <div className='flex w-full ml-2 justify-between'>
-                      <h1>02.</h1>
+                      
                       <div className='w-full flex flex-col ml-3'>
                         <h3 className="text-[#e2a80a]">Knowledge</h3>
                         <p className="text-[#818287] font-poppins text-md text-justify">
@@ -116,7 +118,7 @@ const About = () => {
                       </div>
                   </div>
                   <div className='flex w-full ml-2 justify-between'>
-                      <h1>03.</h1>
+                      
                       <div className='w-full flex flex-col ml-3'>
                         <h3 className="text-[#e2a80a]">Quality</h3>
                         <p className="text-[#818287] font-poppins text-md text-justify">
@@ -125,7 +127,7 @@ const About = () => {
                       </div>
                   </div>
                   <div className='flex w-full ml-2 justify-between'>
-                      <h1>04.</h1>
+                      
                       <div className='w-full flex flex-col ml-3'>
                         <h3 className="text-[#e2a80a]">Industry Connections</h3>
                         <p className="text-[#818287] font-poppins text-md text-justify">
@@ -134,7 +136,7 @@ const About = () => {
                       </div>
                   </div>
                   <div className='flex w-full ml-2 justify-between'>
-                      <h1>05.</h1>
+                      
                       <div className='w-full flex flex-col ml-3'>
                         <h3 className="text-[#e2a80a]">Customer Service</h3>
                         <p className="text-[#818287] font-poppins text-md text-justify">
