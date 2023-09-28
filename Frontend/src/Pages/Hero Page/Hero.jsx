@@ -35,7 +35,7 @@ const Hero = () => {
         </div>
         <div className='justify-center w-screen flex align-center flex flex-col items-center mt-6 '>
             <a href="#stats">
-            <AiFillGitlab color='red' className="flex  justify-center items-end bounce text-6xl" onClick={()=>hanleClick()}/>
+            <AiFillGitlab color='yellow' className="flex  justify-center items-end bounce text-6xl" onClick={()=>hanleClick()}/>
             </a>
         </div>
       </div>
@@ -54,7 +54,7 @@ const Hero = () => {
         </div>
         <div className='justify-center w-screen flex align-center flex flex-col items-center mt-6 '>
         <a href="#stats">
-            <AiFillGitlab color='red' className="flex  justify-center items-end bounce text-6xl" onClick={()=>hanleClick()}/>
+            <AiFillGitlab color='yellow' className="flex  justify-center items-end bounce text-6xl" onClick={()=>hanleClick()}/>
             </a>
         </div>
       </div>

@@ -10,6 +10,7 @@ import axios from "axios"
 import base from "base.js"
 import Footer from 'Pages/Hero Page/Footer';
 import MissionPic from "asstes/Company Pictures/working.jpg"
+import visionPic from "asstes/Company Pictures/roads.jpg"
 import TeamContext from "Hooks/Team"
 
 const About = () => {
@@ -153,10 +154,16 @@ const About = () => {
                   </div>
                   <div className="w-full px-4">
                     <p className="font-poppins text-[#818287] text-md text-justify">
-                    To create long-term shareholder value by providing safe and sustainable engineering, construction and service skills to customers for whom quality, efficiency and reliability are critical.
+                    To be a leading construction and manufacturing company in the global market.
+                    To become the customers' most preferred choice by attaining excellence in quality and timely completed value added projects.
+                    To provide the highest level of service in the construction industry while offering superior craftsmanship to every project, we handle.
+                    To continually innovate, develop and adopt state-of-the-art technology in methods and materials to enhance productivity and cost effectiveness.
+                    To continually improve the competence of our team, and employ diverse, innovative & results-oriented personals, motivated to deliver excellence.
+                    To build a safety culture aimed at continually reducing the frequency severity rate towards achieving zero accidents.
+                    To identify and mitigate all the environmental impacts arising from our activities, and comply with applicable environmental norms.
                     </p>
                   </div>
-                  <div className='flex w-full items-center justify-between '>
+                  {/* <div className='flex w-full items-center justify-between '>
                       <div>
                         <h2>100%</h2>
                         <p>Transparency</p>
@@ -169,7 +176,7 @@ const About = () => {
                         <h2>10k</h2>
                         <p>Monthly Work Done</p>
                       </div>
-                  </div>
+                  </div> */}
               </div>
 
               <div className='w-full lg:w-1/2 '>
@@ -181,7 +188,7 @@ const About = () => {
 
           <div className='w-full bg-[#161616] flex flex-col md:flex-row justify-between pl-4 mt-4'>
               <div className='w-full lg:w-1/2 '>
-              <img crossorigin="anonymous"  src={MissionPic}alt="mechain" className="w-full h-[20rem]" />
+              <img crossorigin="anonymous"  src={visionPic}alt="mechain" className="w-full h-[20rem]" />
               </div>
               <div className='lg:w-1/2 w-full'>
                   <div className='w-full flex items-center justify-center'>
@@ -189,7 +196,10 @@ const About = () => {
                   </div>
                   <div className='w-full px-4'>
                       <p className="font-poppins text-[#818287] text-md text-justify">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quibusdam molestiae itaque laboriosam cupiditate velit. Repudiandae aliquid officia necessitatibus repellat vitae sunt, laboriosam a sit! Fuga deserunt rem pariatur recusandae!
+                      To become the leading construction & manufacturing firm, while delivering projects that consistently exceed international standards and provide exceptional customer satisfaction.
+                      To continually deliver excellent value & innovative construction solutions to meet our clients' requirements.
+                      Using modern principles and sophisticated technologies, Solution Road Equipment And Spars Limited envisions being the primary preference at all times both nationally and globally, for their renowned excellence, quality, performance and reliability in all types of constructions.
+
                       </p>
                   </div>
                   {/* <div>

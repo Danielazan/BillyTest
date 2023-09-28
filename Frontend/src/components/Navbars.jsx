@@ -40,7 +40,7 @@ const Navbars = () => {
             <AiFillHome/>
             Home
             </NavLink>
-          <NavLink to='/Equi' className={`font-poppins flex items-center justify-center font-bold cursor-pointer text-[20px] text-NavTextColor no-underline`}>
+          <NavLink to='/Equi' className={`font-poppins flex items-center justify-center font-bold cursor-pointer text-[20px] outline-black text-NavTextColor no-underline`}>
             <DiRequirejs/>
             Equipments
             </NavLink>

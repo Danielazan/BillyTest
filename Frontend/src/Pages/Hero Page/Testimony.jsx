@@ -38,7 +38,7 @@ const Testimony = () => {
           </div>
             <div className="w-full h-fit md:h-[8rem] ">
               <p className='flex flex-col font-poppins text-[#b3b4b7] lg:ml-6 text-left  mt-4 lg:mt-0  lg:text-left text-lg text-justify mx-6'>
-                Our Computer-aided  designing enables to design the most critical
+                Our Computer-aided  design softwares enables to design the most critical
                 parts in  such a way that they are capable of withstanding  the
                 severest  of  shocks  and  vibrations  during  operation. Ready
                 availability  of  all  frequently  needed  spares along with quick
@@ -150,7 +150,7 @@ const Testimony = () => {
                   <div className="objchild">
                     <h1 className='text-white text-center text-2xl'>Try our services Now</h1>
                       <span className="inn6 text-white text-md">
-                        <p className='font-poppins text-white font-bold p-4'> Solution Road Equipments & Spars Ltd.</p>
+                        <p className='font-poppins text-2xl text-yellow font-bold p-4'> Solution Road Equipments & Spars Ltd.</p>
                       </span>
                   </div>
               </div>
