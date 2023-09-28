@@ -5,7 +5,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { BsFillTelephoneInboundFill } from "react-icons/bs";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { PiWhatsappLogoFill } from "react-icons/pi";
-
+import { AiFillTwitterCircle } from "react-icons/ai";
 import { BsInstagram,BsFacebook,BsLinkedin } from "react-icons/bs";
 import { RiWhatsappFill } from "react-icons/ri";
 
@@ -120,7 +120,7 @@ const Footer = () => {
                   <span className='flex flex-col items-center'>
                     <BsLinkedin color="#f0f3f4" className='text-2xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
                         <h2 className="text-[#f0f3f4] text-2xl">
-                          <a href="" 
+                          <a href="https://www.linkedin.com/in/solution-road-equipment-1b074b293?trk=contact-info" 
                           className="no-underline text-2xl text-[#f0f3f4]" 
                           target="_blank"
                           >Linkedin</a>
@@ -129,7 +129,7 @@ const Footer = () => {
                 </div>
                 <div class="col-span-1 ">
                     <span className='flex flex-col items-center'>
-                      <RiWhatsappFill color="#f0f3f4"  className='text-2xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
+                      <AiFillTwitterCircle color="#f0f3f4"  className='text-2xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
                           <h2 className="text-[#f0f3f4] text-2xl">Whatsapp</h2>
                     </span>
                 </div>
