@@ -87,7 +87,7 @@ const EditEqui = () => {
         await axios.delete(`${URL}/api/machine/${id}`).then((res) => {
         const json = res.data
         
-        dispatchMachine({type:"DeLETE Mechains",payload:json})
+        
         console.log(res.data);
         settoggle(!toggle)
       });
@@ -202,14 +202,14 @@ const EditEqui = () => {
 
                   <div className="w-full">
                       <div className="flex w-full h-fit items-center justify-center">
-                        <h1 className="text-[#fdc901] font-bold font-poppins">Edit Datas For this Equipment</h1>
+                        <h1 className="text-[#fdc901] mt-2 font-bold font-poppins">Edit Datas For this Equipment</h1>
                       </div>
 
                       <div className="w-full h-fit p-6">
                         <div className="flex flex-col md:flex-row w-full h-fit justify-between ">
                            <h2 className="text-white font-poppins text-2xl hidden md:block">Equiment Name</h2>
                             <input 
-                            className="border-b border-blue-500 w-[40rem]" placeholder="Model Name" type="text"
+                            className="border-b border-blue-500 w-[40rem]" placeholder="Equiment Name" type="text"
                             value={EquimentName}
                             style={{backgroundColor: "transparent"}}
                             onChange={(e) => setEquimentName(e.target.value)}
@@ -226,20 +226,22 @@ const EditEqui = () => {
                         />
                         </div>
 
-                        <div className="mt-4 w-full h-fit items-center flex justify-center">
-                            <button 
-                              onClick={()=>{handelEquiEdit(OneImage.id)}}
-                            className="w-[12rem] h-[4rem] rounded-full bg-blue-500 font-poppins text-2xl font-bold ">
-                                Save Changes 
-                            </button>
-                        </div>
+                        <div className="flex-col w-full md:flex-row">
+                          <div className="mt-4 w-full h-fit items-center flex justify-center">
+                              <button 
+                                onClick={()=>{handelEquiEdit(OneImage.id)}}
+                              className="w-[12rem] h-[4rem] rounded-full bg-blue-500 font-poppins text-2xl font-bold ">
+                                  Save Changes 
+                              </button>
+                          </div>
 
-                        <div className="mt-4 w-full h-fit items-center flex justify-center">
-                            <button 
-                            onClick={()=>handleDeleteEqui(OneImage.id)}
-                            className="w-[12rem] h-[4rem] rounded-full bg-blue-500 font-poppins text-2xl font-bold ">
-                                Delete Equipment 
-                            </button>
+                          <div className="mt-4 w-full h-fit items-center flex justify-center">
+                              <button 
+                              onClick={()=>handleDeleteEqui(OneImage.id)}
+                              className="w-[12rem] h-[4rem] rounded-full bg-blue-500 font-poppins text-2xl font-bold ">
+                                  Delete Equipment 
+                              </button>
+                          </div>
                         </div>
                       </div>
 

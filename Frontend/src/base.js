@@ -4,4 +4,5 @@ const base = {
   };
   
   export default base;   
-  
+  // localhost
+  // 3.228.204.33

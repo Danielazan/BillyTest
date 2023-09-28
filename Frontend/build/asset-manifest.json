@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.e0c1335c.css",
-    "main.js": "/static/js/main.c80b1bd4.js",
+    "main.css": "/static/css/main.4db61076.css",
+    "main.js": "/static/js/main.52f5eaec.js",
     "static/media/equi4.jpg": "/static/media/equi4.15f3af32d4d167ba88ab.jpg",
     "static/media/Flip Front 1.jpg": "/static/media/Flip Front 1.5f9965d3e705fb70a0da.jpg",
     "static/media/Flip Back.jpg": "/static/media/Flip Back.8c5355d01a56fa2c142d.jpg",
     "static/media/excavato.jpg": "/static/media/excavato.d5f091a60947cec5b531.jpg",
     "static/media/mobileMachine.jpg": "/static/media/mobileMachine.d7527ae6c33a19518a0a.jpg",
     "static/media/equi2.jpg": "/static/media/equi2.a7bee82651c289920d23.jpg",
-    "static/media/mobile.jpg": "/static/media/mobile.2f4e81aa714903c0816a.jpg",
+    "static/media/mobile.jpg": "/static/media/mobile.42ed0d76bd257d5d6c1d.jpg",
     "static/media/equi3.jpg": "/static/media/equi3.160a30b36ccbfab76471.jpg",
     "static/media/card.png": "/static/media/card.ecf94a7b0a0dfd4b3d3d.png",
     "static/media/Aboutbg.jpg": "/static/media/Aboutbg.165ca02ae49651955d23.jpg",
@@ -20,11 +20,11 @@
     "static/media/Solution Road New Logo.png": "/static/media/Solution Road New Logo.dff8d1a2a314ca897ee6.png",
     "static/media/BG2.jpg": "/static/media/BG2.def9c318ae3bdfa4fb09.jpg",
     "index.html": "/index.html",
-    "main.e0c1335c.css.map": "/static/css/main.e0c1335c.css.map",
-    "main.c80b1bd4.js.map": "/static/js/main.c80b1bd4.js.map"
+    "main.4db61076.css.map": "/static/css/main.4db61076.css.map",
+    "main.52f5eaec.js.map": "/static/js/main.52f5eaec.js.map"
   },
   "entrypoints": [
-    "static/css/main.e0c1335c.css",
-    "static/js/main.c80b1bd4.js"
+    "static/css/main.4db61076.css",
+    "static/js/main.52f5eaec.js"
   ]
 }

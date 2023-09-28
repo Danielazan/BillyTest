@@ -136,7 +136,14 @@ const Footer = () => {
               </div>
           </div>
 
-          
+          <div className="w-full mt-2">
+          <footer className="bg-gray-800 text-white py-4">
+            <div className="container mx-auto flex justify-between items-center">
+              <p className="text-sm">© 2023 Perplexity. All rights reserved.</p>
+              <p className="text-sm">Designed By <span className="text-red-500">&hearts;</span>Lazan Web Development Team</p>
+            </div>
+          </footer>
+          </div>
     </div>
   )
 }
