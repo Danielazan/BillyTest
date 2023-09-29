@@ -123,7 +123,7 @@ const UpdateMachine = async (req, res) => {
       { Name, Description },
       { where: { id: Id } }
     ).then(result =>{
-      res.status(200).json(res)
+      res.status(200).json({ message: 'Machine updated successfully' })
     })
   } catch (error) {
     res.status(400).json({ error: error.message });

@@ -40,11 +40,11 @@ const EquiDes = () => {
                     <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
                       <div className="overflow-hidden">
                           {
-                            Result && <table class="min-w-full text-center text-sm font-light">
+                            Result && <table className="min-w-full text-center text-sm font-light font-poppins">
                             <thead class="border-b font-medium dark:border-neutral-500">
                               <tr>
-                                <th scope="col" className="md:px-6 py-4">Name</th>
-                                <th scope="col" className="px-6 py-4">Description</th>
+                                <th scope="col" className="md:px-6 py-4 text-lg font-extrabold">Name</th>
+                                <th scope="col" className="px-6 py-4 text-lg font-extrabold">Description</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -54,7 +54,9 @@ const EquiDes = () => {
                                 <td className="whitespace-nowrap md:px-6 py-4 font-medium">
                                   {Result.Name}
                                 </td>
-                                <td className="whitespace-nowrap md:px-6 py-4">{Result.Description}</td>
+                                <td className="max-w-[8rem] overflow-wrap: break-word md:px-6 py-4 ">
+                                {Result.Description}
+                                  </td>
                               </tr>
 
                               
@@ -62,12 +64,12 @@ const EquiDes = () => {
                                 <tr
                                   className="border-b border-info-200 bg-info-100 text-neutral-800 flex items-center justify-center ">
                                   
-                                  <table className="min-w-full text-center text-sm font-light">
+                                  <table className="min-w-full text-center text-sm font-bold">
                                 
                                      <thead className="border-b font-medium dark:border-neutral-500">
                                         <tr>
-                                            <th scope="col" className="md:px-6 py-4">ModelName</th>
-                                            <th scope="col" className="md:px-6 py-4">Capacity</th>
+                                            <th scope="col" className="md:px-6 py-4 text-lg font-extrabold">ModelName</th>
+                                            <th scope="col" className="md:px-6 py-4 text-lg font-extrabold">Capacity</th>
                                           </tr>
                                      </thead>
                                     {

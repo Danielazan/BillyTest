@@ -16,19 +16,56 @@ const EditEqui = () => {
     const [single, setsingle] = useState("")
     const [EquiModels, setEquiModels] = useState([])
 
+    const [addModelCapacity, setAddModelCapacity] = useState("")
+    const [ModelName, setModelName] = useState("")
+
+    const [ModelCapcity, setModelCapcity] = useState("")
+
+    const [addModelName, setAddModelName] = useState("")
+
     // for Editing the equipments data
     const URL = base.local
 
     const [Capacity, setCapacity] = useState("")
 
 
-    const [ModelName, setModelName] = useState("")
+   const[MecId,setMecId] = useState("")
 
     const [Description, setDescription] = useState("")
 
     const [EquimentName, setEquimentName] = useState("")
 
     const [SaveEdit, setSaveEdit] = useState(-1)
+    
+    const [ModelMessage, setModelMessage] = useState()
+
+    const modelss ={
+      ModelName:addModelName,
+      Capacity:addModelCapacity
+     }
+
+    const AddModel =async(MecId)=>{
+
+        const id =MecId
+
+        console.log(id)
+
+        await axios.post(`${URL}/api/model/${id}`, modelss).then((res) => {
+            const json = res.data
+            
+            // dispatchMachine({type:"Display Machines",payload:json})
+            console.log(res.data);
+
+            setAddModelName("")
+            setAddModelCapacity("")
+
+          });
+           
+            
+      
+        }
+
+
 
 
     useEffect(() => { 
@@ -73,6 +110,8 @@ const EditEqui = () => {
         Capacity
      }
 
+    
+
      const handleDelete = async (id)=>{
       await axios.delete(`${URL}/api/model/${id}`).then((res) => {
         const json = res.data
@@ -100,7 +139,11 @@ const EditEqui = () => {
           
           dispatchMachine({type:"Create Mechains",payload:json})
           console.log(res.data);
+          
+          setDescription("")
+          setEquimentName("")
         });
+
      }
     const handleEdit = async (id)=>{
       
@@ -108,10 +151,11 @@ const EditEqui = () => {
           const json = res.data
           
           // dispatchMachine({type:"Display Machines",payload:json})
+          settoggle(!toggle)
           console.log(res.data);
         });
 
-        SaveEdit(-1)
+        setSaveEdit(-1)
     }
   return (
     <div className="w-full h-screen overflow-scroll p-4 main-cont">
@@ -131,18 +175,28 @@ const EditEqui = () => {
                 {
                     mechines && mechines.map(mec =>{
                       return(
-                        <div className="w-full relative">
+                        <div>
+                            <div className="w-full relative">
                           <img crossorigin="anonymous"  src={`${URL}/images/`+mec.ImagePath }alt="mechain" className="w-full h-[20rem]" />
                           <div className='w-full h-fit  mt-6 rounded-xl flex justify-center items-center'  >
                             <button className='editimgbtn w-full' onClick={()=>{
                                 settoggle(!toggle)
                                 showEquipment(mec.id)
+                                setMecId(mec.id)
                             }}>
                                 Edit Datas on this Equiments
                             </button>
                             {/* <span>Delete</span> */}
-                </div>
+                      </div>
                         </div>
+
+
+                        
+                        </div>
+                        
+
+                        
+                              
                       )
                     })
                   }
@@ -209,7 +263,7 @@ const EditEqui = () => {
                         <div className="flex flex-col md:flex-row w-full h-fit justify-between ">
                            <h2 className="text-white font-poppins text-2xl hidden md:block">Equiment Name</h2>
                             <input 
-                            className="border-b border-blue-500 w-[40rem]" placeholder="Equiment Name" type="text"
+                            className="border-b border-blue-500 w-[40rem] text-white" placeholder="Equiment Name" type="text"
                             value={EquimentName}
                             style={{backgroundColor: "transparent"}}
                             onChange={(e) => setEquimentName(e.target.value)}
@@ -219,7 +273,7 @@ const EditEqui = () => {
                         <div className="flex flex-col md:flex-row w-full h-fit justify-between ">
                            <h2 className="text-white font-poppins text-2xl hidden md:block">Description</h2>
                             <input 
-                            className="border-b border-blue-500 w-[40rem]" placeholder="Description" type="text"
+                            className="border-b text-white border-blue-500 w-[40rem]" placeholder="Description" type="text"
                             value={Description}
                             style={{backgroundColor: "transparent"}}
                             onChange={(e) => setDescription(e.target.value)}
@@ -253,6 +307,7 @@ const EditEqui = () => {
                       
                       {
                         EquiModels && <div className="overflow-scroll main-cont">
+
                             <table class="min-w-full text-center text-sm font-light font-poppins text-white">
                               <thead class="border-b font-medium dark:border-neutral-500 bg-[#7d919a]">
                                 <tr>
@@ -340,11 +395,73 @@ const EditEqui = () => {
                                   }
                               </tbody>
                             </table>
+
+                            
+                            <div className="w-full mt-6 items-center md:items-left h-fit pl-4  justify-center">
+                        <div className=" w-full flex items-center justify-center border border-blue-500 w-[14rem] rounded-xl">
+                        
+                          <h2 className="font-extrabold text-white font-poppins">
+                            Add models and Capacity for this Equipment
+                          </h2>
+                    </div>
+
+                      <div className={` flex flex-col gap-4 w-full mt-6 h-fit text-left `}>
+                          <div className="w-full h-fit flex items-center justify-between">
+                          <h1 className="text-white hidden md:block font-poppins text-2xl">Model Name</h1>
+
+                          <input 
+                          className="border-b border-blue-500 w-[40rem] text-white" placeholder="Model Name" type="text"
+                          value={addModelName}
+                          style={{backgroundColor: "transparent"}}
+                          onChange={(e) => setAddModelName(e.target.value)}
+                          />
+                          </div>
+
+                          <div className="w-full h-fit flex items-center justify-between">
+                          <h1 className="text-white hidden md:block font-poppins text-2xl">Model Capacity</h1>
+
+                          <input 
+                          className="border-b border-blue-500 w-[40rem] text-white" placeholder="Model Capacity" type="text"
+                          style={{backgroundColor: "transparent"}}
+                          value={addModelCapacity}
+                          onChange={(e) => setAddModelCapacity(e.target.value)}
+                          />
+                          </div>
+                            {/* <div className="w=full h-fit flex items-center justify-center">
+                            <button className="font-poppins text-white text-xl" onClick={AddModel}>
+                                  Add More Models
+                              </button>
+                            </div> */}
+                      </div>
+                </div>
+
+                      {ModelMessage && <div className="w-full items-center justify-center ">
+
+                        <h1 className="text-green-500 text-md font-bold font-poppins">
+                          {ModelMessage}
+                        </h1>
+                        </div>}
+                    <div className="w-full mt-4 mb-6 items-center justify-center flex ">
+                        <button className=' lg:ml-20' onClick={()=>{AddModel(MecId)}}>
+                        Add More Models
+                            <div id="clip">
+                                <div id="leftTop" class="corner"></div>
+                                <div id="rightBottom" class="corner"></div>
+                                <div id="rightTop" class="corner"></div>
+                                <div id="leftBottom" class="corner"></div>
+                            </div>
+                            <span id="rightArrow" class="arrow"></span>
+                            <span id="leftArrow" class="arrow"></span>
+                    </button>
+                    </div>      
+                
                     </div>
                       }
 
                   </div>
                 </div>
+
+                
             </div>
         </motion.div>
     </div>
