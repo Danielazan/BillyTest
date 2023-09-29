@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.00c44015.css",
-    "main.js": "/static/js/main.46d48f10.js",
+    "main.css": "/static/css/main.35cc67fd.css",
+    "main.js": "/static/js/main.996e06c8.js",
     "static/media/equi4.jpg": "/static/media/equi4.15f3af32d4d167ba88ab.jpg",
     "static/media/Flip Front 1.jpg": "/static/media/Flip Front 1.5f9965d3e705fb70a0da.jpg",
     "static/media/Flip Back.jpg": "/static/media/Flip Back.8c5355d01a56fa2c142d.jpg",
@@ -21,11 +21,11 @@
     "static/media/Solution Road New Logo.png": "/static/media/Solution Road New Logo.dff8d1a2a314ca897ee6.png",
     "static/media/BG2.jpg": "/static/media/BG2.def9c318ae3bdfa4fb09.jpg",
     "index.html": "/index.html",
-    "main.00c44015.css.map": "/static/css/main.00c44015.css.map",
-    "main.46d48f10.js.map": "/static/js/main.46d48f10.js.map"
+    "main.35cc67fd.css.map": "/static/css/main.35cc67fd.css.map",
+    "main.996e06c8.js.map": "/static/js/main.996e06c8.js.map"
   },
   "entrypoints": [
-    "static/css/main.00c44015.css",
-    "static/js/main.46d48f10.js"
+    "static/css/main.35cc67fd.css",
+    "static/js/main.996e06c8.js"
   ]
 }

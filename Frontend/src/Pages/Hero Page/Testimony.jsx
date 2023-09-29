@@ -78,7 +78,7 @@ const Testimony = () => {
           <div className='w-full h-fit flex items-center justify-center'>
           <h1 className='text-white font-poppins text-4xl lg:text-6xl '>Team Members</h1>
           </div>
-      <div className='w-full flex flex-col lg:flex-row items-center justify-between lg:pl-4 lg:pr-4 '>
+      <div className='w-full flex flex-col lg:flex-row items-center justify-between lg:pl-4 lg:pr-4'>
           
         <div className="teamcard border-white w-[300px] h-[380px] flex flex-col items-center justify-between text-left mb-3 lg:mb-0">
             <div className='rounded-full w-[110px] h-[120px] bg-black mb-4'>

@@ -212,17 +212,18 @@ const About = () => {
 
           {/* Leading Strong teams */}
               
-         <div className="w-full h-fit">
-            <div className="w-full flex items-center justify-center">
+         <div className="w-full h-fit items-center justify-center">
+            <div className="w-full flex items-center justify-center"
+            >
               <h1 className="text-yellow-500 font-bold">Our Strong Team</h1>
             </div>
 
-         <div className="w-full items-center justify-center ">
+         <div className="w-full flex flex-col lg:flex-row items-center justify-between lg:pl-4 lg:pr-4 ">
          <div className='w-full  gap-2 items-center justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pl-4 pr-4'>
               {
                 Team && Team.map(team =>{
                   return(
-                    <div className="teamcard border-white w-full md:w-[300px] h-[380px] flex flex-col items-center justify-between text-left mb-3 lg:mb-0">
+                    <div className="teamcard border-white w-[300px] h-[380px] flex flex-col items-center justify-between mx-4 text-left mb-3 lg:mb-0">
                       <div className='rounded-full w-[110px] h-[120px] bg-black mb-4'>
                         <img className=" rounded-full h-auto w-full lg:mr-0 " src={`${base.local}/images/`+team.ImagePath } alt="Image description"/>
                       </div>

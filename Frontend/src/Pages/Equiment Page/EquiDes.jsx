@@ -63,9 +63,7 @@ const EquiDes = () => {
                                   className="border-b border-info-200 bg-info-100 text-neutral-800 flex items-center justify-center ">
                                   
                                   <table className="min-w-full text-center text-sm font-light">
-                                 <div className="w-full items-center justify-center">
-                                     <h2>Models And Capacity</h2>
-                                 </div>
+                                
                                      <thead className="border-b font-medium dark:border-neutral-500">
                                         <tr>
                                             <th scope="col" className="md:px-6 py-4">ModelName</th>
