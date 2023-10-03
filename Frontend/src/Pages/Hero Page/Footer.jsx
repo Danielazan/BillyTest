@@ -130,7 +130,8 @@ const Footer = () => {
                 <div class="col-span-1 ">
                     <span className='flex flex-col items-center'>
                       <AiFillTwitterCircle color="#f0f3f4"  className='text-2xl bg-gradient-to-r from-#F56040 to-#FCAF45'/>
-                          <h2 className="text-[#f0f3f4] text-2xl">Twitter</h2>
+                          <h2 className="text-[#f0f3f4] text-2xl"><a className="no-underline text-2xl text-[#f0f3f4]" target="_blank" href="https://x.com/SolutionRoadEq?s=08">
+                            </a>Twitter</h2>
                     </span>
                 </div>
               </div>
