@@ -233,12 +233,12 @@ const About = () => {
                       <p className='text-md font-poppins text-[#dea2eb] text-center font-bold'>
                        {team.Position}
                       </p>
-                      <h1 className='text-[14px] flex justify-between gap-2 items-center  text-white '>
+                      {/* <h1 className='text-[14px] flex justify-between gap-2 items-center  text-white '>
                         <IoLogoWhatsapp className="text-lg" color="#3dbf4f"/> {team.whatsAppNumber}
                       </h1>
                       <h1 className='text-[14px] flex justify-between gap-2 items-center  text-white '>
                         <BsFillTelephoneInboundFill className="text-lg" color="#00f6ff"/> {team.PhoneNumber}
-                      </h1>
+                      </h1> */}
                     
 
                   </div>
